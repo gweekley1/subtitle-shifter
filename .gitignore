@@ -1,0 +1,7 @@
+#Eclipse Files
+/.settings
+.classpath
+.project
+
+# Subtitle Files
+*.srt
