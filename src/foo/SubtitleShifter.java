@@ -23,6 +23,7 @@ public class SubtitleShifter {
 	/*
 	 * args[0] The path to the srt file being modified
 	 * args[1] The amount of milliseconds by which to shift the subtitles
+	 * args[2] The optional output file name
 	 */
 	public static void main(String[] args) {
 		
@@ -52,8 +53,14 @@ public class SubtitleShifter {
 				System.out.println("Changed " + oldTimestamp + " to " + newTimestamp.toString());
 		}
 		
-		// write new subtitles to a new file, `newFileName+$oldfileName.srt`
-		String fileName = "new_" + args[0];
+		// write new subtitles to a new file, the optional arg or `newFileName+$oldfileName.srt`
+		String fileName;
+		if (args.length >= 3) {
+			fileName = args[2];
+		} else {
+			fileName = "new_" + args[0];			
+		}
+		
 		try {
 			Writer fileWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), StandardCharsets.ISO_8859_1));
 			try {
