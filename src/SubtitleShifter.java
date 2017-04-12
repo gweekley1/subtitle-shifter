@@ -9,6 +9,11 @@ import java.nio.file.Paths;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+ * This program shifts the timestamps in a subtitle file of the format `srt` by an arbitrary number of milliseconds
+ * 
+ * @author Grant Weekley
+ */
 public class SubtitleShifter {
 	
 	public static final boolean DEBUG = true;
