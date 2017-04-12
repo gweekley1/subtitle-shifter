@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  */
 public class SubtitleShifter {
 	
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 	
 	/*
 	 * args[0] The path to the srt file being modified
