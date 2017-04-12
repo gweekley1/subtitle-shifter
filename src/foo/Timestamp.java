@@ -1,3 +1,4 @@
+package foo;
 
 /*
  *  This is a timestamp class for holding SRT timestamps
@@ -74,4 +75,12 @@ public class Timestamp {
 		}		
 	}
 	
+	public boolean equals(Timestamp timestamp) {
+		return hours.val == timestamp.hours.val
+				&& minutes.val == timestamp.minutes.val
+				&& seconds.val == timestamp.seconds.val
+				&& milliseconds.val == timestamp.milliseconds.val;
+		
+	}
+ 	
 }
