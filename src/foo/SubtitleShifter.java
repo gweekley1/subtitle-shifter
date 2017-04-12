@@ -53,7 +53,7 @@ public class SubtitleShifter {
 				System.out.println("Changed " + oldTimestamp + " to " + newTimestamp.toString());
 		}
 		
-		// write new subtitles to a new file, the optional arg or `newFileName+$oldfileName.srt`
+		// write new subtitles to a new file, the optional arg or `new_$oldfileName.srt`
 		String fileName;
 		if (args.length >= 3) {
 			fileName = args[2];
