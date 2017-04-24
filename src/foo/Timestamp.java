@@ -39,8 +39,10 @@ public class Timestamp {
 		
 		addAndCarry(seconds, milliseconds, 1000, ms % 1000);
 		addAndCarry(minutes, seconds, 60, (ms / 1000) % 60);
-		addAndCarry(hours, minutes, 60, (ms / 60000) % 60);
+		addAndCarry(hours, minutes, 60, ms / 60000 );
 	
+		// addAndCarry will propogate subtraction beneath zero to the hours field
+		// if this happens, reset the Timestamp to 00:00:00,000
 		if (hours.val < 0) {
 			milliseconds.val = 0;
 			seconds.val = 0;
